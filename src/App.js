@@ -1,22 +1,14 @@
-import React, { Component } from 'react';
+import React from 'react';
 import './App.css';
-import { Layout, Content } from 'react-mdl';
-import Routers from './components/router';
-import CustomHeader from './components/Header';
+import Main from './components/Main';
+import { Footer } from 'react-mdl';
 import CustomFooter from './components/Footer';
 
-class App extends Component {
-    render() {
-        return (
-            <>
-                <Layout>
-                    <CustomHeader />
-                    
-                    {/* <CustomFooter/> */}
-                </Layout>
-            </>
-        );
-    }
+const App = () => {
+    return (<>
+    <Main/>
+    <CustomFooter/>
+    </> )
 }
 
 export default App;
