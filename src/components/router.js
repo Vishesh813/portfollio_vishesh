@@ -1,6 +1,5 @@
 
 import React from 'react';
-import Contact from './contact';
 import { Route, Routes } from 'react-router-dom';
 import EducationSection from './EducationSection';
 import AboutSection from './AboutSection';
@@ -11,7 +10,7 @@ import Awards from './Awards';
 
 const Routers = ()=> (
      <Routes>
-      <Route exact path="/" element={<AboutSection/>} />
+      <Route exact path="/portfollio_vishesh" element={<AboutSection/>} />
       <Route  path="/about" element={<AboutSection/>} />
       <Route  path="/education" element={<EducationSection/>} />
       <Route  path="/work-experience" element={<WorkExperienceSection/>} />

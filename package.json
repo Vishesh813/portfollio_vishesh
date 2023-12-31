@@ -1,5 +1,5 @@
 {
-  "homepage": "https://Vishesh813.github.io/resume-v2",
+  "homepage": "https://vishesh813.github.io/portfollio_vishesh",
   "name": "vishesh_portfolio_v1",
   "version": "0.1.0",
   "private": true,
@@ -26,5 +26,8 @@
     "not dead",
     "not ie <= 11",
     "not op_mini all"
-  ]
+  ],
+  "devDependencies": {
+    "gh-pages": "^6.1.1"
+  }
 }
