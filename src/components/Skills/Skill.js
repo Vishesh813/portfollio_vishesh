@@ -1,5 +1,5 @@
 import React from 'react'
-import { Grid, Cell, List, ListItem, Icon, ListItemContent } from 'react-mdl';
+import { Grid } from 'react-mdl';
 import Experience from '../WorkExperience/exp';
 
 

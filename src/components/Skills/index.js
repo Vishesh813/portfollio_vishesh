@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { Grid, Cell, Tabs, Tab, Content } from 'react-mdl';
+import { Grid, Tabs, Tab, Content } from 'react-mdl';
 import Skill from './Skill';
 
 const frontEndSkills = [{ t: 'HTML', p: 70 }, { t: 'CSS', p: 60 }, { t: 'JQuery', p: 50 }, { t: 'React', p: 65 },
