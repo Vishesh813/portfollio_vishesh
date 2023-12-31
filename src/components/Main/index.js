@@ -3,21 +3,20 @@ import { Grid, Cell, Tabs, Tab, Card, CardTitle, Button, CardText, CardMenu, Ico
 import Resume from '../resume';
 import Education from '../EducationSection/education';
 import Routers from '../router';
-import { useNavigate } from 'react-router-dom';
 
 
 const Main = () => {
 
     const [selectedTab, setSelectedTab] = useState({ activetab: 0 });
-    const navigate = useNavigate();
+  //  const navigate = useNavigate();
 
     const handleToggletab = (tabId) => {
         setSelectedTab({ ...selectedTab, activetab: tabId });
         if(tabId === 0){
-            navigate('/resume');
+          //  navigate('/resume');
         }
         if(tabId === 1){
-            navigate('/education');
+          //  navigate('/education');
         }
        
     }

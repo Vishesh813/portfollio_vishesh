@@ -1,14 +1,14 @@
 {
-  "homepage": "https://vishesh813.github.io/portfollio_vishesh",
+  "homepage": "https://vishesh813.github.io/resume-v2",
   "name": "vishesh_portfolio_v1",
   "version": "0.1.0",
   "private": true,
   "dependencies": {
-    "react": "*",
-    "react-dom": "*",
-    "react-mdl": "*",
-    "react-router-dom": "*",
-    "react-scripts": "*"
+    "react": "^16.7.0",
+    "react-dom": "^16.7.0",
+    "react-mdl": "^2.1.0",
+    "react-router-dom": "^4.3.1",
+    "react-scripts": "^5.0.1"
   },
   "scripts": {
     "start": "react-scripts start",
@@ -28,6 +28,7 @@
     "not op_mini all"
   ],
   "devDependencies": {
+    "@babel/plugin-proposal-private-property-in-object": "^7.21.11",
     "gh-pages": "^6.1.1"
   }
 }

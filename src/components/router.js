@@ -1,23 +1,21 @@
 
 import React from 'react';
-import { Route, Routes } from 'react-router-dom';
+import { Route, Switch } from 'react-router-dom';
 import EducationSection from './EducationSection';
 import AboutSection from './AboutSection';
 import WorkExperienceSection from './WorkExperience';
 import Skills from './Skills';
-import Resume from './resume';
 import Awards from './Awards';
 
 const Routers = ()=> (
-     <Routes>
+     <Switch>
       <Route exact path="/portfollio_vishesh" element={<AboutSection/>} />
-      <Route  path="/about" element={<AboutSection/>} />
-      <Route  path="/education" element={<EducationSection/>} />
-      <Route  path="/work-experience" element={<WorkExperienceSection/>} />
-      <Route  path="/skills" element={<Skills/>} />
-      <Route  path="/awards" element={<Awards/>} />
-      <Route  path="/resume" element={<Resume/>} />
-     </Routes>
+      <Route  path="/about"><AboutSection/></Route>
+      <Route  path="/education"><EducationSection/></Route>
+      <Route  path="/work-experience"><WorkExperienceSection/></Route>
+      <Route  path="/skills"><Skills/></Route>
+      <Route  path="/awards"><Awards/></Route>
+     </Switch>
 )
 
 export default Routers;
