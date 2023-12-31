@@ -5,12 +5,13 @@ import { Link } from 'react-router-dom';
 const CustomDrawer = () => {
     return (
         <>
-            <Drawer className="" title="Vishesh Tiwari">
+            <Drawer title="Vishesh Tiwari">
                 <Navigation>
                     <Link to="/about">About</Link>
-                    <Link to="/resume">Resume</Link>
-                    <Link to="/project">Project</Link>
-                    <Link to="/contact">Contact</Link>
+                    <Link to="/education">Education</Link>
+                    <Link to="/work-experience">Work Experience</Link>
+                    <Link to="/skills">Skills</Link>
+                    <Link to="/awards">Acheivement And Award</Link>
                 </Navigation>
             </Drawer>
         </>

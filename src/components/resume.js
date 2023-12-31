@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
-import Education from './education'
-import Experience from  './exp'
+import Education from './EducationSection/education'
+import Experience from  './WorkExperience/exp'
 import { Grid,Cell } from 'react-mdl';
 import photo from '../img/vispro.jpg';
 

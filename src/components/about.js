@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import Education from './education'
+import Education from './EducationSection/education'
 import Experience from  './exp'
 import { Grid,Cell } from 'react-mdl';
 class About extends Component {

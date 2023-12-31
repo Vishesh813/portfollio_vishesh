@@ -1,18 +1,22 @@
 
 import React from 'react';
-import Mainpage from './mainpage';
-import About from './about';
-import Project from './project';
-import Resume from './resume'; 
 import Contact from './contact';
 import { Route, Routes } from 'react-router-dom';
+import EducationSection from './EducationSection';
+import AboutSection from './AboutSection';
+import WorkExperienceSection from './WorkExperience';
+import Skills from './Skills';
+import Resume from './resume';
+
 const Routers = ()=> (
      <Routes>
-      <Route exact path="/" element={<Resume/>} />
-      <Route  path="/error" element={<About/>} />
-      <Route  path="/project" element={<Project/>} />
+      <Route exact path="/" element={<AboutSection/>} />
+      <Route  path="/about" element={<AboutSection/>} />
+      <Route  path="/education" element={<EducationSection/>} />
+      <Route  path="/work-experience" element={<WorkExperienceSection/>} />
+      <Route  path="/skills" element={<Skills/>} />
+      <Route  path="/awards" element={<Contact/>} />
       <Route  path="/resume" element={<Resume/>} />
-      <Route  path="/contact" element={<Contact/>} />
      </Routes>
 )
 

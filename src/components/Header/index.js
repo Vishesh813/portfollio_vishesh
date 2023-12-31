@@ -9,10 +9,10 @@ const CustomHeader = () => {
         <>
             <Header scroll>
                 <Navigation >
-                    <Link style={{ fontSize: '16px', fontWeight: 'bold' }} to="/resume">Resume</Link>
-                    <Link style={{ fontSize: '16px', fontWeight: 'bold' }} to="/project">Project</Link>
-                    <Link style={{ fontSize: '16px', fontWeight: 'bold' }} to="/contact">Contact</Link>
-                    <Link style={{ fontSize: '16px', fontWeight: 'bold' }} to="/about">About</Link>
+                    <Link style={{ fontSize: '16px', fontWeight: 'bold' }} to="/resume">About</Link>
+                    <Link style={{ fontSize: '16px', fontWeight: 'bold' }} to="/project">Education</Link>
+                    <Link style={{ fontSize: '16px', fontWeight: 'bold' }} to="/contact">Experience</Link>
+                    <Link style={{ fontSize: '16px', fontWeight: 'bold' }} to="/about">Acheivement And Award</Link>
                 </Navigation>
             </Header>
             <CustomDrawer />

@@ -1,15 +1,25 @@
 import React, { Component, useState } from 'react';
-import { Grid, Cell, Tabs, Tab, Card, CardTitle, Button, CardText, CardMenu, IconButton, CardActions } from 'react-mdl';
+import { Grid, Cell, Tabs, Tab, Card, CardTitle, Button, CardText, CardMenu, IconButton, CardActions, Content } from 'react-mdl';
 import Resume from '../resume';
-import Education from '../education';
+import Education from '../EducationSection/education';
+import Routers from '../router';
+import { useNavigate } from 'react-router-dom';
 
 
 const Main = () => {
 
     const [selectedTab, setSelectedTab] = useState({ activetab: 0 });
+    const navigate = useNavigate();
 
     const handleToggletab = (tabId) => {
         setSelectedTab({ ...selectedTab, activetab: tabId });
+        if(tabId === 0){
+            navigate('/resume');
+        }
+        if(tabId === 1){
+            navigate('/education');
+        }
+       
     }
 
 
@@ -18,7 +28,7 @@ const Main = () => {
             return (<Resume />)
         }
 
-        if (selectedTab.activetab === 1) {
+        if (selectedTab.activetab === 3) {
             return (<div className="about-me-rightcol" >    <Education startYear='2012' endYear='2016'
                 degree='B.Sc(Mathematics/Chemistry)'
                 school='V.S.S.D College,Kanpur'
@@ -47,7 +57,7 @@ const Main = () => {
 
             <Grid>
                 <Cell col={12}>
-                    {renderTab()}
+                    <Content><Routers/></Content>
                 </Cell>
             </Grid>
         </div>
