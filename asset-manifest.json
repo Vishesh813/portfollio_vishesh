@@ -1,17 +1,17 @@
 {
   "files": {
-    "main.css": "/resume-v2/static/css/main.978e784c.css",
-    "main.js": "/resume-v2/static/js/main.8cf6b3c2.js",
-    "static/media/profile-pic.png": "/resume-v2/static/media/profile-pic.2dc85d3337b3ea49f6ac.png",
-    "static/media/csjm-logo.png": "/resume-v2/static/media/csjm-logo.1ead36847927f701fdd4.png",
-    "static/media/up-bord-logo.png": "/resume-v2/static/media/up-bord-logo.cce80ae2e903681153b9.png",
-    "static/media/knit-logo.jpg": "/resume-v2/static/media/knit-logo.c18297b386f05fc055d6.jpg",
-    "index.html": "/resume-v2/index.html",
-    "main.978e784c.css.map": "/resume-v2/static/css/main.978e784c.css.map",
-    "main.8cf6b3c2.js.map": "/resume-v2/static/js/main.8cf6b3c2.js.map"
+    "main.css": "/portfollio_vishesh/static/css/main.978e784c.css",
+    "main.js": "/portfollio_vishesh/static/js/main.3bc0750b.js",
+    "static/media/profile-pic.png": "/portfollio_vishesh/static/media/profile-pic.2dc85d3337b3ea49f6ac.png",
+    "static/media/csjm-logo.png": "/portfollio_vishesh/static/media/csjm-logo.1ead36847927f701fdd4.png",
+    "static/media/up-bord-logo.png": "/portfollio_vishesh/static/media/up-bord-logo.cce80ae2e903681153b9.png",
+    "static/media/knit-logo.jpg": "/portfollio_vishesh/static/media/knit-logo.c18297b386f05fc055d6.jpg",
+    "index.html": "/portfollio_vishesh/index.html",
+    "main.978e784c.css.map": "/portfollio_vishesh/static/css/main.978e784c.css.map",
+    "main.3bc0750b.js.map": "/portfollio_vishesh/static/js/main.3bc0750b.js.map"
   },
   "entrypoints": [
     "static/css/main.978e784c.css",
-    "static/js/main.8cf6b3c2.js"
+    "static/js/main.3bc0750b.js"
   ]
 }
