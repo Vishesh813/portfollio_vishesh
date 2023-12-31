@@ -1,17 +1,19 @@
 {
-  "main.css": "/portfollio_vishesh/static/css/main.e25a707c.chunk.css",
-  "main.js": "/portfollio_vishesh/static/js/main.8e15c385.chunk.js",
-  "main.js.map": "/portfollio_vishesh/static/js/main.8e15c385.chunk.js.map",
-  "static/css/1.af485290.chunk.css": "/portfollio_vishesh/static/css/1.af485290.chunk.css",
-  "static/js/1.bb5dd502.chunk.js": "/portfollio_vishesh/static/js/1.bb5dd502.chunk.js",
-  "static/js/1.bb5dd502.chunk.js.map": "/portfollio_vishesh/static/js/1.bb5dd502.chunk.js.map",
-  "runtime~main.js": "/portfollio_vishesh/static/js/runtime~main.655daf7c.js",
-  "runtime~main.js.map": "/portfollio_vishesh/static/js/runtime~main.655daf7c.js.map",
-  "static/media/vispro.jpg": "/portfollio_vishesh/static/media/vispro.9f3e3e40.jpg",
-  "static/media/1.gif": "/portfollio_vishesh/static/media/1.5c8f08b5.gif",
-  "static/css/main.e25a707c.chunk.css.map": "/portfollio_vishesh/static/css/main.e25a707c.chunk.css.map",
-  "static/css/1.af485290.chunk.css.map": "/portfollio_vishesh/static/css/1.af485290.chunk.css.map",
-  "index.html": "/portfollio_vishesh/index.html",
-  "precache-manifest.bc7cc9c8b6e04d61820d1a0ccd396998.js": "/portfollio_vishesh/precache-manifest.bc7cc9c8b6e04d61820d1a0ccd396998.js",
-  "service-worker.js": "/portfollio_vishesh/service-worker.js"
+  "files": {
+    "main.css": "/resume-v2/static/css/main.978e784c.css",
+    "main.js": "/resume-v2/static/js/main.35e3396e.js",
+    "static/media/profile-pic.png": "/resume-v2/static/media/profile-pic.2dc85d3337b3ea49f6ac.png",
+    "static/media/1.gif": "/resume-v2/static/media/1.a4ad838c5771c82cbbd6.gif",
+    "static/media/vispro.jpg": "/resume-v2/static/media/vispro.766c6784072b74396bec.jpg",
+    "static/media/csjm-logo.png": "/resume-v2/static/media/csjm-logo.1ead36847927f701fdd4.png",
+    "static/media/up-bord-logo.png": "/resume-v2/static/media/up-bord-logo.cce80ae2e903681153b9.png",
+    "static/media/knit-logo.jpg": "/resume-v2/static/media/knit-logo.c18297b386f05fc055d6.jpg",
+    "index.html": "/resume-v2/index.html",
+    "main.978e784c.css.map": "/resume-v2/static/css/main.978e784c.css.map",
+    "main.35e3396e.js.map": "/resume-v2/static/js/main.35e3396e.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.978e784c.css",
+    "static/js/main.35e3396e.js"
+  ]
 }
