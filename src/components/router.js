@@ -7,6 +7,7 @@ import AboutSection from './AboutSection';
 import WorkExperienceSection from './WorkExperience';
 import Skills from './Skills';
 import Resume from './resume';
+import Awards from './Awards';
 
 const Routers = ()=> (
      <Routes>
@@ -15,7 +16,7 @@ const Routers = ()=> (
       <Route  path="/education" element={<EducationSection/>} />
       <Route  path="/work-experience" element={<WorkExperienceSection/>} />
       <Route  path="/skills" element={<Skills/>} />
-      <Route  path="/awards" element={<Contact/>} />
+      <Route  path="/awards" element={<Awards/>} />
       <Route  path="/resume" element={<Resume/>} />
      </Routes>
 )
