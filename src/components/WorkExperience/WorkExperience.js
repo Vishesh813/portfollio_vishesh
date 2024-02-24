@@ -7,7 +7,7 @@ const WorkExperience = ({ image, orgName, position, city, startYear, endYear, de
         <div>
             <Grid>
                 <Cell col={2}>
-                    <img src={image} style={{ height: '100px', border: '3px solid white', width: '100px', borderRadius: '50%' }} />
+                    <img src={image} alt='profile-pic' style={{ height: '100px', border: '3px solid white', width: '100px', borderRadius: '50%' }} />
                 </Cell>
                 <Cell col={10}>
                     <h4 style={{ marginTop: '0px', fontFamily: 'Ubuntu' }}>{position}</h4>

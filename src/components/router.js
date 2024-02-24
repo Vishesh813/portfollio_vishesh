@@ -10,7 +10,8 @@ import Awards from './Awards';
 const Routers = ()=> (
      <Switch>
       <Route  path="/about"><AboutSection/></Route>
-      <Route  path="/resume-v2"><AboutSection/></Route>
+      <Route  path='/*'><AboutSection/></Route>
+      <Route  path="/portfollio_vishesh"><AboutSection/></Route>
       <Route  path="/education"><EducationSection/></Route>
       <Route  path="/work-experience"><WorkExperienceSection/></Route>
       <Route  path="/skills"><Skills/></Route>

@@ -7,7 +7,7 @@ class Education extends Component {
          <div>
             <Grid>
                <Cell col={2}>
-                  <img src={this.props.image} style={{ padding:'0px 0px 0px 0px', height: '100px', border: '3px solid white', width: '100px', borderRadius: '50%' }} />
+                  <img src={this.props.image} alt='org-img' style={{ padding:'0px 0px 0px 0px', height: '100px', border: '3px solid white', width: '100px', borderRadius: '50%' }} />
                </Cell>
                <Cell col={8}>
                   <h4 style={{ marginTop: '0px', fontFamily: 'Ubuntu' }}>{this.props.degree}</h4>
