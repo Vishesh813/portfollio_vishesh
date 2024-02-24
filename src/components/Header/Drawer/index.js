@@ -7,7 +7,7 @@ const CustomDrawer = () => {
         <>
             <Drawer title="Vishesh Tiwari">
                 <Navigation>
-                    <Link to="/about">About</Link>
+                    <Link className="active" to="/about">About</Link>
                     <Link to="/education">Education</Link>
                     <Link to="/work-experience">Work Experience</Link>
                     <Link to="/skills">Skills</Link>

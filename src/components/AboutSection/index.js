@@ -21,18 +21,20 @@ const AboutSection = () => {
                         <hr style={{ borderTop: '3px solid blue', width: '100%' }}></hr>
                         <p>
                         Experienced IT professional with 4.5+ years of work experience seeking a position as Full stack developer. 
-                        Offering expertise in Java, Spring Boot/MVC and AWS.
+                        Offering expertise in Java, Spring Boot/MVC, React and AWS.
                         </p>
 
                         <div>
-                        <hr style={{ borderTop: '3px solid blue', width: '100%' }}></hr>  
-                        <h5>Contact No:</h5>
-                            <p>9807522813</p>
-                            <h5>Email:</h5>
-                            <p>vishesh.tiwari2427@gmail.com</p>
-                            <h5>Blogs,Websites:</h5>
+                        <hr style={{ borderTop: '3px solid blue', width: '100%' }}></hr> 
+                           <h5>email:</h5>
+                            <p>vishesh.tiwari2427@gmail.com</p> 
+                            <h5>linkedin</h5>
+                            <p>https://www.linkedin.com/in/vishesh-tiwari-448222146/</p>
+                            <h5>github</h5>
+                            <p>https://www.linkedin.com/in/vishesh-tiwari-448222146/</p>
+                           {/* <h5>Blogs,Websites:</h5>
                             <p>angleforangularandreact.blogspot.com
-                                skiptoread.blogspot.com</p>
+                                skiptoread.blogspot.com</p>  */}
                         </div>
                     </Cell>
                 </Grid>
