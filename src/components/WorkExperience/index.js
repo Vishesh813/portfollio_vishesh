@@ -17,10 +17,18 @@ const principalDetails = [
 ]
 
 const tcsDetails = [
-    " Developed a web-based application which helps to find active mainframe jobs script based on a search condition using Spring boot for backend and Bootstrap for frontend development",
+    "Developed a web-based application which helps to find active mainframe jobs script based on a search condition using Spring boot for backend and Bootstrap for frontend development",
     "Design and developed web applications using  Java EE 8 technologies like Servlets,JSP,JDBC follows MVC.",
     "Developing Java REST Web services and improving front-end using jQuery,HTML,CSS,AJAX. ",
     "Automated different manual test cases using. Tools used by HP LeanFT similar to Selenium. Worked on Integration Java with the LeanFT tool."
+]
+
+const lowesDetails = [
+    "Spearheaded the creation of Promo Central Applications, the central hub to create diverse types of promotions in a generic way.",
+    "Empowered promo specialists to effortlessly create a wide range of promotions.",
+    "Collaborated with Promo Central team to utilize JAVA, Springboot, React.",
+    "Architected applications, executed integration test cases, and managed CI/CD with Jenkins and Docker.",
+    "Optimized search operations over millions of data with appropriate strategies, enhancing read and write operations efficiency.",  
 ]
 
 const WorkExperienceSection = () => {
@@ -34,7 +42,7 @@ const WorkExperienceSection = () => {
                         city='Banglore'
                         image={lowesLogo}
                         details={''}
-                        points={[]}
+                        points={lowesDetails}
                     />
                     <WorkExperience startYear='January 2022' endYear='February 2023'
                         orgName='Principal Global Services'
