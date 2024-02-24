@@ -9,12 +9,14 @@ import Awards from './Awards';
 
 const Routers = ()=> (
      <Switch>
-      <Route  path="/about"><AboutSection/></Route>
-      <Route  path="/portfollio_vishesh"><AboutSection/></Route>
-      <Route  path="/education"><EducationSection/></Route>
-      <Route  path="/work-experience"><WorkExperienceSection/></Route>
-      <Route  path="/skills"><Skills/></Route>
-      <Route  path="/awards"><Awards/></Route>
+      <Route exact  path="/" component={AboutSection} />
+      <Route exact  path="/about" component={AboutSection} />
+      <Route  path="/portfollio_vishesh" component={AboutSection}/>
+      <Route  path="/education" component={EducationSection}/>
+      <Route  path="/work-experience" component={WorkExperienceSection}/>
+      <Route  path="/skills" component={Skills}/>
+      <Route  path="/awards" component={Awards}/>
+
      </Switch>
 )
 
