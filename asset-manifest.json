@@ -1,17 +1,17 @@
 {
   "files": {
-    "main.css": "/portfollio_vishesh/static/css/main.978e784c.css",
-    "main.js": "/portfollio_vishesh/static/js/main.045591c5.js",
+    "main.css": "/portfollio_vishesh/static/css/main.acc75240.css",
+    "main.js": "/portfollio_vishesh/static/js/main.7a967faf.js",
     "static/media/profile-pic.png": "/portfollio_vishesh/static/media/profile-pic.2dc85d3337b3ea49f6ac.png",
     "static/media/csjm-logo.png": "/portfollio_vishesh/static/media/csjm-logo.1ead36847927f701fdd4.png",
     "static/media/up-bord-logo.png": "/portfollio_vishesh/static/media/up-bord-logo.cce80ae2e903681153b9.png",
     "static/media/knit-logo.jpg": "/portfollio_vishesh/static/media/knit-logo.c18297b386f05fc055d6.jpg",
     "index.html": "/portfollio_vishesh/index.html",
-    "main.978e784c.css.map": "/portfollio_vishesh/static/css/main.978e784c.css.map",
-    "main.045591c5.js.map": "/portfollio_vishesh/static/js/main.045591c5.js.map"
+    "main.acc75240.css.map": "/portfollio_vishesh/static/css/main.acc75240.css.map",
+    "main.7a967faf.js.map": "/portfollio_vishesh/static/js/main.7a967faf.js.map"
   },
   "entrypoints": [
-    "static/css/main.978e784c.css",
-    "static/js/main.045591c5.js"
+    "static/css/main.acc75240.css",
+    "static/js/main.7a967faf.js"
   ]
 }
