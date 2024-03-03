@@ -31,7 +31,7 @@ const AboutSection = () => {
                             <h5>linkedin</h5>
                             <p>https://www.linkedin.com/in/vishesh-tiwari-448222146/</p>
                             <h5>github</h5>
-                            <p>https://www.linkedin.com/in/vishesh-tiwari-448222146/</p>
+                            <p>https://github.com/Vishesh813</p>
                            {/* <h5>Blogs,Websites:</h5>
                             <p>angleforangularandreact.blogspot.com
                                 skiptoread.blogspot.com</p>  */}
