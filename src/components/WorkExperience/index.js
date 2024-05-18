@@ -38,7 +38,7 @@ const WorkExperienceSection = () => {
                 <Cell col={12}>
                     <WorkExperience startYear='February 2023' endYear='present'
                         orgName='Lowes'
-                        position='Software Engineer'
+                        position='Senior Software Engineer'
                         city='Banglore'
                         image={lowesLogo}
                         details={''}

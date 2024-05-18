@@ -20,14 +20,14 @@ const AboutSection = () => {
                         <h4 style={{ color: 'gray', textAlign: 'center' }}>Full Stack Java Developer</h4>
                         <hr style={{ borderTop: '3px solid blue', width: '100%' }}></hr>
                         <p>
-                        Experienced IT professional with 4.5+ years of work experience seeking a position as Full stack developer. 
+                        Experienced IT professional with 5+ years of work experience seeking a position as Full stack developer. 
                         Offering expertise in Java, Spring Boot/MVC, React and AWS.
                         </p>
 
                         <div>
                         <hr style={{ borderTop: '3px solid blue', width: '100%' }}></hr> 
                            <h5>email:</h5>
-                            <p>vishesh.tiwari2427@gmail.com</p> 
+                            <p>vishesh.tiwari813@gmail.com</p> 
                             <h5>linkedin</h5>
                             <p>https://www.linkedin.com/in/vishesh-tiwari-448222146/</p>
                             <h5>github</h5>
