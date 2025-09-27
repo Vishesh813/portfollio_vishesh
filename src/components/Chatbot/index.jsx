@@ -45,10 +45,10 @@ const Chatbot = () => {
     setMessages(prev => [...prev, userMessage, botResponse]);
     setShowQuestions(false);
     
-    // Show questions again after 2 seconds
+    // Show questions again after 5 seconds to allow reading the answer
     setTimeout(() => {
       setShowQuestions(true);
-    }, 2000);
+    }, 5000);
   };
 
   const resetChat = () => {

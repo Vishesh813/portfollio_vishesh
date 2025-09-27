@@ -1,5 +1,6 @@
 import React from 'react';
 import portfolioData from '../../data/portfolioData.json';
+import profilePic from '../../img/profile-pic.png';
 import './AboutSection.css';
 
 const AboutSection = () => {
@@ -13,7 +14,7 @@ const AboutSection = () => {
             <div className="profile-card">
               <div className="profile-image-container">
                 <img
-                  src={personal.profileImage}
+                  src={profilePic}
                   alt={personal.name}
                   className="profile-image"
                 />
