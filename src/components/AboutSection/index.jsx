@@ -1,8 +1,10 @@
 import React from 'react';
-import profilePic from '../../img/profile-pic.png';
+import portfolioData from '../../data/portfolioData.json';
 import './AboutSection.css';
 
 const AboutSection = () => {
+  const { personal } = portfolioData;
+  
   return (
     <div className="about-section">
       <div className="about-container">
@@ -11,17 +13,17 @@ const AboutSection = () => {
             <div className="profile-card">
               <div className="profile-image-container">
                 <img
-                  src={profilePic}
-                  alt="Vishesh Tiwari"
+                  src={personal.profileImage}
+                  alt={personal.name}
                   className="profile-image"
                 />
               </div>
-              <h1 className="profile-name">Vishesh Tiwari</h1>
-              <h2 className="profile-title">Full Stack Java Developer</h2>
+              <h1 className="profile-name">{personal.name}</h1>
+              <h2 className="profile-title">{personal.title}</h2>
               <div className="profile-tags">
-                <span className="tag">6+ Years Experience</span>
-                <span className="tag">Java Expert</span>
-                <span className="tag">React Developer</span>
+                {personal.tags.map((tag, index) => (
+                  <span key={index} className="tag">{tag}</span>
+                ))}
               </div>
             </div>
           </div>
@@ -29,16 +31,11 @@ const AboutSection = () => {
           <div className="about-right">
             <div className="about-content">
               <h3 className="section-title">About Me</h3>
-              <p className="about-text">
-                Experienced IT professional with 6+ years of work experience seeking a position as Full stack developer. 
-                Offering expertise in Java, Spring Boot/MVC, React and AWS.
-              </p>
-              
-              <p className="about-text">
-                I am passionate about creating efficient, scalable applications and have a strong background in 
-                both frontend and backend development. My experience spans across various technologies including 
-                Java ecosystem, modern JavaScript frameworks, and cloud platforms.
-              </p>
+              {personal.about.map((paragraph, index) => (
+                <p key={index} className="about-text">
+                  {paragraph}
+                </p>
+              ))}
 
               <div className="divider"></div>
 
@@ -47,15 +44,15 @@ const AboutSection = () => {
               <div className="contact-info">
                 <div className="contact-item">
                   <span className="contact-icon">📧</span>
-                  <a href="mailto:vishesh.tiwari813@gmail.com" className="contact-link">
-                    vishesh.tiwari813@gmail.com
+                  <a href={`mailto:${personal.email}`} className="contact-link">
+                    {personal.email}
                   </a>
                 </div>
                 
                 <div className="contact-item">
                   <span className="contact-icon">💼</span>
                   <a 
-                    href="https://www.linkedin.com/in/vishesh-tiwari-448222146/" 
+                    href={personal.linkedin} 
                     target="_blank" 
                     rel="noopener noreferrer"
                     className="contact-link"
@@ -67,7 +64,7 @@ const AboutSection = () => {
                 <div className="contact-item">
                   <span className="contact-icon">🐙</span>
                   <a 
-                    href="https://github.com/Vishesh813" 
+                    href={personal.github} 
                     target="_blank" 
                     rel="noopener noreferrer"
                     className="contact-link"

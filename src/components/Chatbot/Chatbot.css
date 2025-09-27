@@ -44,6 +44,7 @@
   flex-direction: column;
   z-index: 999;
   animation: slideUp 0.3s ease-out;
+  overflow: hidden;
 }
 
 @keyframes slideUp {
@@ -64,7 +65,7 @@
   align-items: center;
   padding: 15px 20px;
   background-color: var(--linkedin-blue);
-  color: white;
+  color: white !important;
   border-radius: 12px 12px 0 0;
 }
 
@@ -89,24 +90,38 @@
   margin: 0;
   font-size: 1rem;
   font-weight: 600;
+  color: white !important;
 }
 
 .status {
   font-size: 0.8rem;
   opacity: 0.9;
+  color: white !important;
 }
 
+.header-actions {
+  display: flex;
+  gap: 8px;
+}
+
+.reset-btn,
 .close-btn {
   background: none;
   border: none;
-  color: white;
-  font-size: 1.2rem;
+  color: white !important;
+  font-size: 1.1rem;
   cursor: pointer;
-  padding: 5px;
+  padding: 6px;
   border-radius: 4px;
   transition: background-color 0.2s ease;
+  width: 32px;
+  height: 32px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
+.reset-btn:hover,
 .close-btn:hover {
   background-color: rgba(255, 255, 255, 0.2);
 }
@@ -126,17 +141,17 @@
 }
 
 .chatbot-messages::-webkit-scrollbar-track {
-  background: var(--bg-tertiary);
+  background: var(--bg-secondary);
   border-radius: 3px;
 }
 
 .chatbot-messages::-webkit-scrollbar-thumb {
-  background: var(--border-color);
+  background: var(--text-muted);
   border-radius: 3px;
 }
 
 .chatbot-messages::-webkit-scrollbar-thumb:hover {
-  background: var(--text-muted);
+  background: var(--linkedin-blue);
 }
 
 /* Messages */
@@ -165,14 +180,18 @@
 }
 
 .message.user .message-content {
-  background-color: var(--linkedin-blue);
-  color: white;
+  background-color: var(--linkedin-blue) !important;
+  color: white !important;
   border-bottom-right-radius: 6px;
 }
 
+.message.user .message-content * {
+  color: white !important;
+}
+
 .message.bot .message-content {
-  background-color: var(--bg-tertiary);
-  color: var(--text-primary);
+  background-color: var(--bg-secondary);
+  color: var(--text-primary) !important;
   border: 1px solid var(--border-color);
   border-bottom-left-radius: 6px;
 }
@@ -199,7 +218,7 @@
   width: 8px;
   height: 8px;
   border-radius: 50%;
-  background-color: var(--text-muted);
+  background-color: var(--linkedin-blue);
   animation: typing 1.4s infinite ease-in-out;
 }
 
@@ -226,34 +245,65 @@
 .quick-questions {
   padding: 15px 20px;
   border-top: 1px solid var(--border-color);
+  background-color: var(--bg-primary);
 }
 
-.quick-questions p {
-  margin: 0 0 10px 0;
-  font-size: 0.8rem;
-  color: var(--text-secondary);
-  font-weight: 600;
+/* Question Tabs */
+.question-tabs {
+  display: flex;
+  gap: 4px;
+  margin-bottom: 15px;
+  background-color: var(--bg-tertiary);
+  border-radius: 8px;
+  padding: 4px;
 }
 
-.quick-question-btn {
-  display: block;
-  width: 100%;
-  text-align: left;
-  background: none;
-  border: 1px solid var(--border-color);
-  color: var(--text-primary);
+.tab-btn {
+  flex: 1;
   padding: 8px 12px;
-  margin-bottom: 6px;
-  border-radius: 16px;
+  border: none;
+  background: transparent;
+  color: var(--text-secondary) !important;
   font-size: 0.8rem;
+  font-weight: 600;
   cursor: pointer;
+  border-radius: 6px;
   transition: all 0.2s ease;
 }
 
+.tab-btn:hover {
+  background-color: var(--bg-secondary);
+  color: var(--text-primary) !important;
+}
+
+.tab-btn.active {
+  background-color: var(--linkedin-blue) !important;
+  color: white !important;
+}
+
+.questions-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 8px;
+}
+
+.quick-question-btn {
+  text-align: left;
+  background-color: var(--bg-secondary);
+  border: 1px solid var(--border-color);
+  color: var(--text-primary) !important;
+  padding: 10px 12px;
+  border-radius: 8px;
+  font-size: 0.75rem;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  line-height: 1.2;
+}
+
 .quick-question-btn:hover {
-  background-color: var(--bg-tertiary);
+  background-color: var(--linkedin-blue) !important;
   border-color: var(--linkedin-blue);
-  color: var(--linkedin-blue);
+  color: white !important;
 }
 
 /* Input Area */
@@ -261,6 +311,7 @@
   display: flex;
   padding: 15px 20px;
   border-top: 1px solid var(--border-color);
+  background-color: var(--bg-primary);
   gap: 10px;
 }
 
@@ -269,7 +320,7 @@
   padding: 10px 15px;
   border: 1px solid var(--border-color);
   border-radius: 20px;
-  background-color: var(--bg-primary);
+  background-color: var(--bg-secondary);
   color: var(--text-primary);
   font-size: 0.9rem;
   outline: none;
@@ -278,6 +329,7 @@
 
 .chatbot-input input:focus {
   border-color: var(--linkedin-blue);
+  background-color: var(--bg-primary);
 }
 
 .chatbot-input input:disabled {
@@ -290,7 +342,7 @@
   height: 40px;
   border-radius: 50%;
   background-color: var(--linkedin-blue);
-  color: white;
+  color: white !important;
   border: none;
   cursor: pointer;
   font-size: 1.1rem;
@@ -303,12 +355,29 @@
 .chatbot-input button:hover:not(:disabled) {
   background-color: var(--linkedin-blue-hover);
   transform: scale(1.05);
+  color: white !important;
 }
 
 .chatbot-input button:disabled {
   opacity: 0.5;
   cursor: not-allowed;
   transform: none;
+}
+
+/* Disabled Input Styling */
+.chatbot-input.disabled {
+  opacity: 0.7;
+}
+
+.chatbot-input.disabled input {
+  background-color: var(--bg-tertiary);
+  cursor: not-allowed;
+  font-style: italic;
+}
+
+.chatbot-input.disabled button {
+  background-color: var(--text-muted);
+  cursor: not-allowed;
 }
 
 /* Mobile Responsive */
@@ -327,5 +396,14 @@
     width: 55px;
     height: 55px;
     font-size: 1.3rem;
+  }
+  
+  .questions-grid {
+    grid-template-columns: 1fr;
+  }
+  
+  .quick-question-btn {
+    font-size: 0.8rem;
+    padding: 12px;
   }
 }
