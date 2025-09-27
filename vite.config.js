@@ -6,6 +6,7 @@ export default defineConfig({
   plugins: [react({
     jsxRuntime: 'automatic'
   })],
+  base: '/portfollio_vishesh/',
   server: {
     port: 3000,
     open: true
