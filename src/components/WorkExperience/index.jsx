@@ -1,5 +1,6 @@
 import React from 'react';
 import portfolioData from '../../data/portfolioData.json';
+import targetLogo from '../../img/target-logo.png';
 import './WorkExperience.css';
 
 // Company color mapping
@@ -15,7 +16,7 @@ const experiences = portfolioData.workExperience.map(exp => ({
   position: exp.position,
   location: exp.location,
   duration: exp.duration,
-  logo: exp.logo,
+  logo: exp.company === 'Target' ? targetLogo : exp.logo,
   color: companyColors[exp.company] || '#0066cc',
   achievements: exp.achievements,
 }));
@@ -35,7 +36,16 @@ const WorkExperienceSection = () => {
               <div className="timeline-content">
                 <div className="experience-card">
                   <div className="experience-header">
-                    <img src={exp.logo} alt={exp.company} className="company-logo" />
+                    <img 
+                      src={exp.logo} 
+                      alt={exp.company} 
+                      className="company-logo"
+                      onError={(e) => {
+                        console.log('Logo failed to load:', exp.logo);
+                        e.target.style.display = 'none';
+                      }}
+                      onLoad={() => console.log('Logo loaded successfully:', exp.logo)}
+                    />
                     <div className="experience-info">
                       <h2 className="position-title">{exp.position}</h2>
                       <h3 className="company-name">{exp.company}</h3>
