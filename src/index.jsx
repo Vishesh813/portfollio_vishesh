@@ -1,9 +1,8 @@
 import React from 'react';
 import { createRoot } from 'react-dom/client';
-import { HashRouter } from 'react-router-dom';
+import { BrowserRouter } from 'react-router-dom';
 import './index.css';
-import App from './App';
-import * as serviceWorker from './serviceWorker';
+import App from './App.jsx';
 
 const container = document.getElementById('root');
 if (!container) {
@@ -13,9 +12,7 @@ if (!container) {
 const root = createRoot(container);
 
 root.render(
-  <HashRouter>
+  <BrowserRouter>
     <App />
-  </HashRouter>
+  </BrowserRouter>
 );
-
-serviceWorker.unregister();

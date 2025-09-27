@@ -1,11 +1,11 @@
 
 import React from 'react';
 import { Routes, Route } from 'react-router-dom';
-import EducationSection from './EducationSection';
-import AboutSection from './AboutSection';
-import WorkExperienceSection from './WorkExperience';
-import Skills from './Skills';
-import Awards from './Awards';
+import EducationSection from './EducationSection/index.jsx';
+import AboutSection from './AboutSection/index.jsx';
+import WorkExperienceSection from './WorkExperience/index.jsx';
+import Skills from './Skills/index.jsx';
+import Awards from './Awards/index.jsx';
 
 const Routers = () => (
   <Routes>

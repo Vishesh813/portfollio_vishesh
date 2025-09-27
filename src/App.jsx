@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from 'react';
-import CustomDrawer from './components/Header/Drawer';
-import Routers from './components/router';
+import CustomDrawer from './components/Header/Drawer/index.jsx';
+import Routers from './components/router.jsx';
 import './App.css';
 
 const App = () => {
