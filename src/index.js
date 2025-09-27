@@ -1,14 +1,21 @@
 import React from 'react';
-import ReactDOM from 'react-dom';
+import { createRoot } from 'react-dom/client';
 import { HashRouter } from 'react-router-dom';
 import './index.css';
-import 'react-mdl/extra/material.css';
-import 'react-mdl/extra/material.js';
 import App from './App';
 import * as serviceWorker from './serviceWorker';
 
-ReactDOM.render(
-<HashRouter><App /></HashRouter>,
- document.getElementById('root'));
+const container = document.getElementById('root');
+if (!container) {
+  throw new Error('Root element not found');
+}
+
+const root = createRoot(container);
+
+root.render(
+  <HashRouter>
+    <App />
+  </HashRouter>
+);
 
 serviceWorker.unregister();
