@@ -4,7 +4,7 @@
     "title": "Full Stack Java Developer",
     "experience": "6+ Years Experience",
     "currentRole": "Senior Software Engineer",
-    "currentCompany": "Lowe's",
+    "currentCompany": "Target",
     "location": "India",
     "email": "vishesh.tiwari813@gmail.com",
     "linkedin": "https://www.linkedin.com/in/vishesh-tiwari-448222146/",
@@ -56,9 +56,24 @@
     {
       "id": 1,
       "position": "Senior Software Engineer",
+      "company": "Target",
+      "location": "Bangalore, India",
+      "duration": "Aug 2024 - Present",
+      "type": "Full Time",
+      "logo": "https://logos-world.net/wp-content/uploads/2020/04/Target-Logo.png",
+      "achievements": [
+        "Working on Ad Tech platform for targeted advertising solutions",
+        "Developing scalable microservices for real-time ad serving and optimization",
+        "Implementing data-driven advertising algorithms and analytics",
+        "Contributing to high-performance systems handling millions of ad requests"
+      ]
+    },
+    {
+      "id": 2,
+      "position": "Senior Software Engineer",
       "company": "Lowe's",
       "location": "Bangalore, India",
-      "duration": "May 2022 - Present",
+      "duration": "May 2022 - Aug 2024",
       "type": "Full Time",
       "logo": "./src/img/logo-lowes.png",
       "achievements": [
@@ -69,7 +84,7 @@
       ]
     },
     {
-      "id": 2,
+      "id": 3,
       "position": "Software Engineer",
       "company": "Principal Global Services",
       "location": "Pune, India",
@@ -84,7 +99,7 @@
       ]
     },
     {
-      "id": 3,
+      "id": 4,
       "position": "Software Developer",
       "company": "Tata Consultancy Services",
       "location": "Pune, India",
@@ -167,6 +182,22 @@
   "projects": [
     {
       "id": 1,
+      "title": "Ad Tech Platform",
+      "description": "A scalable advertising technology platform built for Target to deliver targeted ads and optimize ad performance in real-time.",
+      "technologies": ["Java", "Spring Boot", "Microservices", "AWS", "Kafka", "Redis"],
+      "features": [
+        "Real-time ad serving and optimization",
+        "Data-driven advertising algorithms",
+        "High-performance systems handling millions of requests",
+        "Scalable microservices architecture"
+      ],
+      "company": "Target",
+      "year": "2024",
+      "status": "Production",
+      "icon": "🎯"
+    },
+    {
+      "id": 2,
       "title": "Promo Central Application",
       "description": "A comprehensive promotion management system built for Lowe's to create and manage diverse types of promotions in a generic way.",
       "technologies": ["Java", "Spring Boot", "React", "Jenkins", "Docker", "AWS"],
@@ -182,7 +213,7 @@
       "icon": "🏪"
     },
     {
-      "id": 2,
+      "id": 3,
       "title": "Transaction Tracking System",
       "description": "Enhanced operation teams experience for tracking transactions and generating reports with advanced filtering capabilities.",
       "technologies": ["Java", "Spring Boot", "AWS SQS", "AWS Lambda", "CloudWatch"],
@@ -198,7 +229,7 @@
       "icon": "📊"
     },
     {
-      "id": 3,
+      "id": 4,
       "title": "Spring Batch Processing System",
       "description": "Developed Spring Batch application for processing large volumes of records efficiently with error handling and monitoring.",
       "technologies": ["Java", "Spring Batch", "Spring Boot", "AWS CDK", "Infrastructure as Code"],
@@ -214,7 +245,7 @@
       "icon": "⚙️"
     },
     {
-      "id": 4,
+      "id": 5,
       "title": "Mainframe Jobs Management System",
       "description": "Web-based application to find and manage active mainframe jobs with advanced search capabilities.",
       "technologies": ["Java EE 8", "Spring Boot", "Bootstrap", "jQuery", "REST APIs"],
@@ -230,7 +261,7 @@
       "icon": "🖥️"
     },
     {
-      "id": 5,
+      "id": 6,
       "title": "Automated Testing Framework",
       "description": "Automated testing solution using HP LeanFT for comprehensive test coverage and continuous integration.",
       "technologies": ["Java", "HP LeanFT", "Selenium", "Test Automation", "CI/CD"],
@@ -251,12 +282,12 @@
       {
         "id": 1,
         "question": "What's Vishesh's work experience?",
-        "answer": "Vishesh has 6+ years of professional experience as a Full Stack Java Developer. He currently works as a Senior Software Engineer at Lowe's, previously worked at Principal Global Services and TCS. His career spans across various domains including retail, financial services, and consulting."
+        "answer": "Vishesh has 6+ years of professional experience as a Full Stack Java Developer. He currently works as a Senior Software Engineer at Target in Ad Tech, previously worked at Lowe's, Principal Global Services and TCS. His career spans across various domains including advertising technology, retail, financial services, and consulting."
       },
       {
         "id": 2,
         "question": "What's his current role?",
-        "answer": "Currently, Vishesh works as a Senior Software Engineer at Lowe's, where he develops promotion management systems and works on optimizing search capabilities for millions of records using Java, Spring Boot, and AWS technologies."
+        "answer": "Currently, Vishesh works as a Senior Software Engineer at Target, where he develops Ad Tech platform solutions for targeted advertising, real-time ad serving, and optimization using Java, Spring Boot, and AWS technologies."
       },
       {
         "id": 3,
@@ -278,7 +309,7 @@
       {
         "id": 6,
         "question": "What projects has he worked on?",
-        "answer": "Vishesh has worked on several major projects including Promo Central Application at Lowe's, Transaction Tracking Systems, Spring Batch Processing applications, and Mainframe Jobs Management systems. His projects focus on scalable, enterprise-level solutions."
+        "answer": "Vishesh has worked on several major projects including Ad Tech Platform at Target, Promo Central Application at Lowe's, Transaction Tracking Systems, Spring Batch Processing applications, and Mainframe Jobs Management systems. His projects focus on scalable, enterprise-level solutions."
       },
       {
         "id": 7,

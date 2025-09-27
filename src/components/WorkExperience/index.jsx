@@ -1,56 +1,24 @@
 import React from 'react';
-import lowesLogo from '../../img/logo-lowes.png';
-import principalLogo from '../../img/pricipal-logo.jpg';
-import tcsLogo from '../../img/tcs-logo.png';
+import portfolioData from '../../data/portfolioData.json';
 import './WorkExperience.css';
 
-const experiences = [
-  {
-    company: 'Lowe\'s',
-    position: 'Senior Software Engineer',
-    location: 'Bangalore',
-    duration: 'February 2023 - Present',
-    logo: lowesLogo,
-    color: '#004990',
-    achievements: [
-      'Spearheaded the creation of Promo Central Applications, the central hub to create diverse types of promotions in a generic way',
-      'Empowered promo specialists to effortlessly create a wide range of promotions',
-      'Collaborated with Promo Central team to utilize JAVA, Springboot, React',
-      'Architected applications, executed integration test cases, and managed CI/CD with Jenkins and Docker',
-      'Optimized search operations over millions of data with appropriate strategies, enhancing read and write operations efficiency',
-    ],
-  },
-  {
-    company: 'Principal Global Services',
-    position: 'Software Engineer',
-    location: 'Pune',
-    duration: 'January 2022 - February 2023',
-    logo: principalLogo,
-    color: '#1f4e79',
-    achievements: [
-      'Improved operation teams experience for tracking transaction and viewing the reports based on conditions on UI',
-      'Developed Spring Batch application for processing records in batch',
-      'Created Jira error notification component using AWS services like AWS SQS, AWS CloudWatch, AWS Lambda',
-      'Migrated spring web application components written in event-driven architecture using AWS services',
-      'Experienced in infrastructure as Code to deliver a stable environment rapidly and scale using AWS CDK',
-      'Trained new joiners on domain knowledge as well agile practices, Git and other framework',
-    ],
-  },
-  {
-    company: 'Tata Consultancy Services',
-    position: 'System Engineer',
-    location: 'Pune',
-    duration: 'June 2019 - January 2022',
-    logo: tcsLogo,
-    color: '#0066cc',
-    achievements: [
-      'Developed a web-based application which helps to find active mainframe jobs script based on a search condition using Spring boot for backend and Bootstrap for frontend development',
-      'Design and developed web applications using Java EE 8 technologies like Servlets, JSP, JDBC follows MVC',
-      'Developing Java REST Web services and improving front-end using jQuery, HTML, CSS, AJAX',
-      'Automated different manual test cases using HP LeanFT similar to Selenium. Worked on Integration Java with the LeanFT tool',
-    ],
-  },
-];
+// Company color mapping
+const companyColors = {
+  'Target': '#CC0000',
+  'Lowe\'s': '#004990', 
+  'Principal Global Services': '#1f4e79',
+  'Tata Consultancy Services': '#0066cc'
+};
+
+const experiences = portfolioData.workExperience.map(exp => ({
+  company: exp.company,
+  position: exp.position,
+  location: exp.location,
+  duration: exp.duration,
+  logo: exp.logo,
+  color: companyColors[exp.company] || '#0066cc',
+  achievements: exp.achievements,
+}));
 
 const WorkExperienceSection = () => {
   return (

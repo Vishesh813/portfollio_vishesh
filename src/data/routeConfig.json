@@ -52,7 +52,7 @@
       "title": "Projects & Portfolio",
       "description": "Showcase of my technical projects",
       "icon": "🚀",
-      "showInNav": true,
+      "showInNav": false,
       "isDefault": false
     },
     {

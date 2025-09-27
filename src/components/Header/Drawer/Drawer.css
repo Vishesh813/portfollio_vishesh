@@ -108,7 +108,7 @@
   gap: 12px;
   padding: 12px 20px;
   color: var(--text-primary);
-  text-decoration: none;
+  text-decoration: none !important;
   font-size: 0.95rem;
   font-weight: 500;
   border-radius: 8px;
@@ -120,12 +120,24 @@
 .drawer-link:hover {
   background-color: var(--bg-secondary);
   color: var(--linkedin-blue);
+  text-decoration: none !important;
+}
+
+.drawer-link:hover .nav-icon,
+.drawer-link:hover .nav-text {
+  color: var(--linkedin-blue);
 }
 
 .drawer-link.active {
-  background-color: var(--linkedin-blue);
-  color: white;
+  background-color: var(--linkedin-blue) !important;
+  color: white !important;
   font-weight: 600;
+  text-decoration: none !important;
+}
+
+.drawer-link.active .nav-icon,
+.drawer-link.active .nav-text {
+  color: white !important;
 }
 
 .nav-icon {
