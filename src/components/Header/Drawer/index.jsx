@@ -13,6 +13,17 @@ const CustomDrawer = ({ isOpen, onToggle, onClose }) => {
     { text: 'Awards', path: '/awards' },
   ];
 
+  // Function to check if a menu item should be active
+  const isActive = (itemPath) => {
+    const currentPath = location.pathname;
+    // If we're on root path "/", show About as active
+    if (currentPath === '/' && itemPath === '/about') {
+      return true;
+    }
+    // For other paths, check exact match
+    return currentPath === itemPath;
+  };
+
   return (
     <>
       {/* Hamburger Menu Button */}
@@ -41,7 +52,7 @@ const CustomDrawer = ({ isOpen, onToggle, onClose }) => {
             <Link
               key={item.text}
               to={item.path}
-              className={`drawer-link ${location.pathname === item.path ? 'active' : ''}`}
+              className={`drawer-link ${isActive(item.path) ? 'active' : ''}`}
               onClick={onClose}
             >
               {item.text}
