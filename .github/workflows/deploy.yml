@@ -2,9 +2,9 @@ name: Deploy to GitHub Pages
 
 on:
   push:
-    branches: [ main, master ]
+    branches: [ main, master, porfolio_vishesh_vite ]
   pull_request:
-    branches: [ main, master ]
+    branches: [ main, master, porfolio_vishesh_vite ]
 
 jobs:
   build-and-deploy:
