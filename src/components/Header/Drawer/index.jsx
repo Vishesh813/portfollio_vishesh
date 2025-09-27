@@ -11,7 +11,7 @@ const CustomDrawer = ({ isOpen, onToggle, onClose }) => {
     { text: 'About', path: '/about' },
     { text: 'Education', path: '/education' },
     { text: 'Work Experience', path: '/work-experience' },
-    { text: 'Projects', path: '/projects' },
+    // { text: 'Projects', path: '/projects' }, // Hidden until data is ready
     { text: 'Skills', path: '/skills' },
     { text: 'Awards', path: '/awards' },
   ];
