@@ -2,6 +2,7 @@ import React, { useEffect, useState } from 'react';
 import CustomDrawer from './components/Header/Drawer/index.jsx';
 import Routers from './components/router.jsx';
 import ErrorBoundary from './components/ErrorBoundary/index.jsx';
+import Chatbot from './components/Chatbot/index.jsx';
 import { ThemeProvider } from './contexts/ThemeContext.jsx';
 import './App.css';
 
@@ -32,6 +33,7 @@ const App = () => {
           <main className={`main-content ${isDrawerOpen ? 'drawer-open' : ''}`}>
             <Routers />
           </main>
+          <Chatbot />
         </div>
       </ThemeProvider>
     </ErrorBoundary>
