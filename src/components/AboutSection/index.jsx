@@ -17,6 +17,7 @@ const AboutSection = () => {
                   src={profilePic}
                   alt={personal.name}
                   className="profile-image"
+                  loading="lazy"
                 />
               </div>
               <h1 className="profile-name">{personal.name}</h1>
