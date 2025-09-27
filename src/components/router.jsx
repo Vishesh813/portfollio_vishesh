@@ -1,13 +1,16 @@
 import React, { Suspense, lazy } from 'react';
 import { Routes, Route } from 'react-router-dom';
+import routeConfig from '../data/routeConfig.json';
 
-// Lazy load all components
-const AboutSection = lazy(() => import('./AboutSection/index.jsx'));
-const EducationSection = lazy(() => import('./EducationSection/index.jsx'));
-const WorkExperienceSection = lazy(() => import('./WorkExperience/index.jsx'));
-const Skills = lazy(() => import('./Skills/index.jsx'));
-const Awards = lazy(() => import('./Awards/index.jsx'));
-const Projects = lazy(() => import('./Projects/index.jsx'));
+// Dynamic component loader
+const componentMap = {
+  AboutSection: lazy(() => import('./AboutSection/index.jsx')),
+  EducationSection: lazy(() => import('./EducationSection/index.jsx')),
+  WorkExperienceSection: lazy(() => import('./WorkExperience/index.jsx')),
+  Skills: lazy(() => import('./Skills/index.jsx')),
+  Awards: lazy(() => import('./Awards/index.jsx')),
+  Projects: lazy(() => import('./Projects/index.jsx'))
+};
 
 // Loading component
 const LoadingSpinner = () => (
@@ -19,19 +22,41 @@ const LoadingSpinner = () => (
   </div>
 );
 
+// Dynamic route generator
+const generateRoutes = () => {
+  return routeConfig.routes.map((route) => {
+    const Component = componentMap[route.component];
+    
+    if (!Component) {
+      console.warn(`Component ${route.component} not found in componentMap`);
+      return null;
+    }
+
+    return (
+      <Route
+        key={route.id}
+        path={route.path}
+        element={<Component />}
+      />
+    );
+  }).filter(Boolean);
+};
+
+// Get fallback component
+const getFallbackComponent = () => {
+  const fallbackComponentName = routeConfig.fallback.component;
+  return componentMap[fallbackComponentName] || componentMap.AboutSection;
+};
+
 const Routers = () => {
+  const FallbackComponent = getFallbackComponent();
+  
   return (
     <Suspense fallback={<LoadingSpinner />}>
       <Routes>
-        <Route path="/" element={<AboutSection />} />
-        <Route path="/about" element={<AboutSection />} />
-        <Route path="/education" element={<EducationSection />} />
-        <Route path="/work-experience" element={<WorkExperienceSection />} />
-        <Route path="/projects" element={<Projects />} />
-        <Route path="/skills" element={<Skills />} />
-        <Route path="/awards" element={<Awards />} />
+        {generateRoutes()}
         {/* Catch-all route for any unmatched paths */}
-        <Route path="*" element={<AboutSection />} />
+        <Route path="*" element={<FallbackComponent />} />
       </Routes>
     </Suspense>
   );

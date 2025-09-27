@@ -1,20 +1,17 @@
 import React from 'react';
 import { Link, useLocation } from 'react-router-dom';
 import { useTheme } from '../../../contexts/ThemeContext.jsx';
+import { useRoutes } from '../../../hooks/useRoutes.js';
+import portfolioData from '../../../data/portfolioData.json';
 import './Drawer.css';
 
 const CustomDrawer = ({ isOpen, onToggle, onClose }) => {
   const location = useLocation();
   const { theme, toggleTheme, isDark } = useTheme();
+  const { getNavigationRoutes } = useRoutes();
   
-  const menuItems = [
-    { text: 'About', path: '/about' },
-    { text: 'Education', path: '/education' },
-    { text: 'Work Experience', path: '/work-experience' },
-    // { text: 'Projects', path: '/projects' }, // Hidden until data is ready
-    { text: 'Skills', path: '/skills' },
-    { text: 'Awards', path: '/awards' },
-  ];
+  // Get menu items from JSON configuration
+  const menuItems = getNavigationRoutes();
 
   // Function to check if a menu item should be active
   const isActive = (itemPath) => {
@@ -26,7 +23,7 @@ const CustomDrawer = ({ isOpen, onToggle, onClose }) => {
     }
     
     // Handle About page - it should be active for home routes
-    if (itemPath === '/about') {
+    if (itemPath === '/about' || itemPath === '/') {
       const isHomePage = currentPath === '/' || currentPath === '/about';
       return isHomePage;
     }
@@ -54,19 +51,21 @@ const CustomDrawer = ({ isOpen, onToggle, onClose }) => {
       {/* Drawer */}
       <div className={`custom-drawer ${isOpen ? 'open' : ''}`}>
         <div className="drawer-header">
-          <h3>Vishesh Tiwari</h3>
-          <p>Full Stack Developer</p>
+          <h3>{portfolioData.personal.name}</h3>
+          <p>{portfolioData.personal.title}</p>
         </div>
         <div className="drawer-divider"></div>
         <nav className="drawer-nav">
           {menuItems.map((item) => (
             <Link
-              key={item.text}
+              key={item.id}
               to={item.path}
               className={`drawer-link ${isActive(item.path) ? 'active' : ''}`}
               onClick={onClose}
+              title={item.description}
             >
-              {item.text}
+              <span className="nav-icon">{item.icon}</span>
+              <span className="nav-text">{item.name}</span>
             </Link>
           ))}
         </nav>
