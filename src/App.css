@@ -7,8 +7,8 @@
   --bg-secondary: #f3f2ef;
   --bg-tertiary: #f8f9fa;
   --text-primary: #000000;
-  --text-secondary: #666666;
-  --text-muted: #999999;
+  --text-secondary: #333333;
+  --text-muted: #666666;
   --border-color: #e0e0e0;
   --linkedin-blue: #0a66c2;
   --linkedin-blue-hover: #004182;
@@ -25,8 +25,8 @@
   --bg-secondary: #262626;
   --bg-tertiary: #2f2f2f;
   --text-primary: #ffffff;
-  --text-secondary: #b0b0b0;
-  --text-muted: #888888;
+  --text-secondary: #e0e0e0;
+  --text-muted: #b0b0b0;
   --border-color: #404040;
   --linkedin-blue: #70b5f9;
   --linkedin-blue-hover: #5a9bd4;
@@ -44,8 +44,8 @@
     --bg-secondary: #262626;
     --bg-tertiary: #2f2f2f;
     --text-primary: #ffffff;
-    --text-secondary: #b0b0b0;
-    --text-muted: #888888;
+    --text-secondary: #e0e0e0;
+    --text-muted: #b0b0b0;
     --border-color: #404040;
     --linkedin-blue: #70b5f9;
     --linkedin-blue-hover: #5a9bd4;
@@ -265,6 +265,24 @@ html {
   margin-bottom: 1rem;
 }
 
+/* Ensure all text has proper contrast */
+h1, h2, h3, h4, h5, h6 {
+  color: var(--text-primary);
+}
+
+p, span, div {
+  color: var(--text-secondary);
+}
+
+/* Override for specific cases where text should be primary */
+.text-primary {
+  color: var(--text-primary) !important;
+}
+
+.text-secondary {
+  color: var(--text-secondary) !important;
+}
+
 /* Links */
 a {
   color: var(--linkedin-blue);
@@ -275,4 +293,27 @@ a {
 a:hover {
   color: var(--linkedin-blue-hover);
   text-decoration: underline;
+}
+
+/* Ensure high contrast for all interactive elements */
+button {
+  color: var(--text-primary);
+}
+
+input, textarea, select {
+  color: var(--text-primary);
+  background-color: var(--bg-primary);
+  border: 1px solid var(--border-color);
+}
+
+/* Ensure proper contrast for all content */
+* {
+  /* Ensure minimum contrast ratios */
+  text-shadow: none;
+}
+
+/* Force high contrast for critical text */
+.high-contrast {
+  color: var(--text-primary) !important;
+  font-weight: 600;
 }
