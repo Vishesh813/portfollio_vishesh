@@ -12,7 +12,7 @@ if (!container) {
 const root = createRoot(container);
 
 root.render(
-  <BrowserRouter>
+  <BrowserRouter basename="/portfollio_vishesh">
     <App />
   </BrowserRouter>
 );

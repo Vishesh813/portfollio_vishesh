@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from 'react';
 import CustomDrawer from './components/Header/Drawer/index.jsx';
 import Routers from './components/router.jsx';
+import { ThemeProvider } from './contexts/ThemeContext.jsx';
 import './App.css';
 
 const App = () => {
@@ -19,16 +20,18 @@ const App = () => {
   }, []);
 
   return (
-    <div className="app">
-      <CustomDrawer 
-        isOpen={isDrawerOpen} 
-        onToggle={() => setIsDrawerOpen(!isDrawerOpen)}
-        onClose={() => setIsDrawerOpen(false)}
-      />
-      <main className={`main-content ${isDrawerOpen ? 'drawer-open' : ''}`}>
-        <Routers />
-      </main>
-    </div>
+    <ThemeProvider>
+      <div className="app">
+        <CustomDrawer 
+          isOpen={isDrawerOpen} 
+          onToggle={() => setIsDrawerOpen(!isDrawerOpen)}
+          onClose={() => setIsDrawerOpen(false)}
+        />
+        <main className={`main-content ${isDrawerOpen ? 'drawer-open' : ''}`}>
+          <Routers />
+        </main>
+      </div>
+    </ThemeProvider>
   );
 };
 

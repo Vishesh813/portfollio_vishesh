@@ -19,7 +19,7 @@ const AboutSection = () => {
               <h1 className="profile-name">Vishesh Tiwari</h1>
               <h2 className="profile-title">Full Stack Java Developer</h2>
               <div className="profile-tags">
-                <span className="tag">5+ Years Experience</span>
+                <span className="tag">6+ Years Experience</span>
                 <span className="tag">Java Expert</span>
                 <span className="tag">React Developer</span>
               </div>
@@ -30,7 +30,7 @@ const AboutSection = () => {
             <div className="about-content">
               <h3 className="section-title">About Me</h3>
               <p className="about-text">
-                Experienced IT professional with 5+ years of work experience seeking a position as Full stack developer. 
+                Experienced IT professional with 6+ years of work experience seeking a position as Full stack developer. 
                 Offering expertise in Java, Spring Boot/MVC, React and AWS.
               </p>
               

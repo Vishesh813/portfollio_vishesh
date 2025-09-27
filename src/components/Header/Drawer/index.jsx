@@ -1,9 +1,11 @@
 import React from 'react';
 import { Link, useLocation } from 'react-router-dom';
+import { useTheme } from '../../../contexts/ThemeContext.jsx';
 import './Drawer.css';
 
 const CustomDrawer = ({ isOpen, onToggle, onClose }) => {
   const location = useLocation();
+  const { theme, toggleTheme, isDark } = useTheme();
   
   const menuItems = [
     { text: 'About', path: '/about' },
@@ -15,11 +17,19 @@ const CustomDrawer = ({ isOpen, onToggle, onClose }) => {
 
   // Function to check if a menu item should be active
   const isActive = (itemPath) => {
-    const currentPath = location.pathname;
-    // If we're on root path "/", show About as active
-    if (currentPath === '/' && itemPath === '/about') {
-      return true;
+    let currentPath = location.pathname;
+    
+    // Remove base path if present to normalize the path
+    if (currentPath.startsWith('/portfollio_vishesh')) {
+      currentPath = currentPath.replace('/portfollio_vishesh', '') || '/';
     }
+    
+    // Handle About page - it should be active for home routes
+    if (itemPath === '/about') {
+      const isHomePage = currentPath === '/' || currentPath === '/about';
+      return isHomePage;
+    }
+    
     // For other paths, check exact match
     return currentPath === itemPath;
   };
@@ -59,6 +69,16 @@ const CustomDrawer = ({ isOpen, onToggle, onClose }) => {
             </Link>
           ))}
         </nav>
+        <div className="drawer-footer">
+          <button 
+            className="theme-toggle"
+            onClick={toggleTheme}
+            aria-label={`Switch to ${isDark ? 'light' : 'dark'} mode`}
+          >
+            <span className="theme-icon">{isDark ? '☀️' : '🌙'}</span>
+            <span className="theme-text">{isDark ? 'Light Mode' : 'Dark Mode'}</span>
+          </button>
+        </div>
       </div>
     </>
   );

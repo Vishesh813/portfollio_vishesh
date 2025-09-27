@@ -5,18 +5,19 @@
   top: 20px;
   left: 20px;
   z-index: 1001;
-  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  background-color: var(--linkedin-blue);
   border: none;
   border-radius: 8px;
   padding: 12px;
   cursor: pointer;
-  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
+  box-shadow: 0 2px 8px var(--shadow-light);
   transition: all 0.3s ease;
 }
 
 .hamburger-menu:hover {
+  background-color: var(--linkedin-blue-hover);
   transform: scale(1.05);
-  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.4);
+  box-shadow: 0 4px 12px var(--shadow-medium);
 }
 
 .hamburger-line {
@@ -57,8 +58,9 @@
 .custom-drawer {
   width: 240px;
   height: 100vh;
-  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
-  color: white;
+  background-color: var(--bg-primary);
+  border-right: 1px solid var(--border-color);
+  color: var(--text-primary);
   position: fixed;
   left: 0;
   top: 0;
@@ -66,6 +68,8 @@
   display: flex;
   flex-direction: column;
   transition: transform 0.3s ease;
+  box-shadow: 2px 0 8px var(--shadow-light);
+  transform: translateX(0); /* Always visible on desktop */
 }
 
 .drawer-header {
@@ -77,19 +81,19 @@
 .drawer-header h3 {
   margin: 0 0 8px 0;
   font-size: 1.5rem;
-  font-weight: bold;
+  font-weight: 600;
+  color: var(--text-primary);
 }
 
 .drawer-header p {
   margin: 0;
-  opacity: 0.8;
+  color: var(--text-secondary);
   font-size: 0.9rem;
 }
 
-
 .drawer-divider {
   height: 1px;
-  background: rgba(255, 255, 255, 0.2);
+  background-color: var(--border-color);
   margin: 0 20px;
 }
 
@@ -101,21 +105,64 @@
 .drawer-link {
   display: block;
   padding: 15px 20px;
-  color: white;
-  text-decoration: none;
+  color: var(--text-primary);
+  text-decoration: none !important;
   transition: all 0.3s ease;
   border-left: 3px solid transparent;
+  font-weight: 500;
 }
 
 .drawer-link:hover {
-  background: rgba(255, 255, 255, 0.1);
-  border-left-color: rgba(255, 255, 255, 0.5);
+  background-color: var(--bg-tertiary);
+  border-left-color: var(--linkedin-blue);
+  color: var(--linkedin-blue);
+  text-decoration: none !important;
 }
 
 .drawer-link.active {
-  background: rgba(255, 255, 255, 0.15);
-  border-left-color: white;
-  font-weight: bold;
+  background-color: var(--linkedin-blue);
+  border-left-color: var(--linkedin-blue);
+  color: white;
+  font-weight: 600;
+  text-decoration: none !important;
+}
+
+/* Theme Toggle */
+.drawer-footer {
+  padding: 20px;
+  border-top: 1px solid var(--border-color);
+  margin-top: auto;
+}
+
+.theme-toggle {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 12px 16px;
+  background-color: var(--bg-tertiary);
+  border: 1px solid var(--border-color);
+  border-radius: 8px;
+  color: var(--text-primary);
+  cursor: pointer;
+  transition: all 0.3s ease;
+  font-size: 0.9rem;
+  font-weight: 500;
+}
+
+.theme-toggle:hover {
+  background-color: var(--linkedin-blue);
+  color: white;
+  border-color: var(--linkedin-blue);
+}
+
+.theme-icon {
+  font-size: 1.2rem;
+}
+
+.theme-text {
+  flex: 1;
+  text-align: left;
 }
 
 /* Mobile and Tablet Styles */
@@ -130,13 +177,12 @@
   
   .custom-drawer {
     width: 280px;
-    transform: translateX(-100%);
+    transform: translateX(-100%); /* Hidden by default on mobile */
   }
   
   .custom-drawer.open {
-    transform: translateX(0);
+    transform: translateX(0); /* Visible when opened on mobile */
   }
-  
   
   .drawer-header h3 {
     font-size: 1.3rem;
