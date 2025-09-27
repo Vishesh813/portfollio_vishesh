@@ -13,6 +13,7 @@ const Chatbot = () => {
     }
   ]);
   const [showQuestions, setShowQuestions] = useState(true);
+  const [questionsExpanded, setQuestionsExpanded] = useState(true);
   const [currentSet, setCurrentSet] = useState('general');
   const messagesEndRef = useRef(null);
 
@@ -43,12 +44,8 @@ const Chatbot = () => {
     };
 
     setMessages(prev => [...prev, userMessage, botResponse]);
-    setShowQuestions(false);
-    
-    // Show questions again after 5 seconds to allow reading the answer
-    setTimeout(() => {
-      setShowQuestions(true);
-    }, 5000);
+    setQuestionsExpanded(false); // Collapse questions to show answer
+    setShowQuestions(true); // Keep questions available but collapsed
   };
 
   const resetChat = () => {
@@ -61,6 +58,7 @@ const Chatbot = () => {
       }
     ]);
     setShowQuestions(true);
+    setQuestionsExpanded(true);
   };
 
   return (
@@ -130,38 +128,48 @@ const Chatbot = () => {
           {/* Question Categories */}
           {showQuestions && (
             <div className="quick-questions">
-              <p>Ask me about {portfolioData.personal.name}:</p>
-              <div className="question-tabs">
-                <button 
-                  className={`tab-btn ${currentSet === 'general' ? 'active' : ''}`}
-                  onClick={() => setCurrentSet('general')}
-                >
-                  General
-                </button>
-                <button 
-                  className={`tab-btn ${currentSet === 'technical' ? 'active' : ''}`}
-                  onClick={() => setCurrentSet('technical')}
-                >
-                  Technical
-                </button>
-                <button 
-                  className={`tab-btn ${currentSet === 'career' ? 'active' : ''}`}
-                  onClick={() => setCurrentSet('career')}
-                >
-                  Career
+              <div className="questions-header" onClick={() => setQuestionsExpanded(!questionsExpanded)}>
+                <p>Ask me about {portfolioData.personal.name}:</p>
+                <button className="expand-btn" aria-label="Toggle questions">
+                  {questionsExpanded ? '▼' : '▶'}
                 </button>
               </div>
-              <div className="questions-grid">
-                {questionSets[currentSet].map((qa) => (
-                  <button
-                    key={qa.id}
-                    className="quick-question-btn"
-                    onClick={() => handleQuestionClick(qa)}
-                  >
-                    {qa.question}
-                  </button>
-                ))}
-              </div>
+              
+              {questionsExpanded && (
+                <div className="questions-content">
+                  <div className="question-tabs">
+                    <button 
+                      className={`tab-btn ${currentSet === 'general' ? 'active' : ''}`}
+                      onClick={() => setCurrentSet('general')}
+                    >
+                      General
+                    </button>
+                    <button 
+                      className={`tab-btn ${currentSet === 'technical' ? 'active' : ''}`}
+                      onClick={() => setCurrentSet('technical')}
+                    >
+                      Technical
+                    </button>
+                    <button 
+                      className={`tab-btn ${currentSet === 'career' ? 'active' : ''}`}
+                      onClick={() => setCurrentSet('career')}
+                    >
+                      Career
+                    </button>
+                  </div>
+                  <div className="questions-grid">
+                    {questionSets[currentSet].map((qa) => (
+                      <button
+                        key={qa.id}
+                        className="quick-question-btn"
+                        onClick={() => handleQuestionClick(qa)}
+                      >
+                        {qa.question}
+                      </button>
+                    ))}
+                  </div>
+                </div>
+              )}
             </div>
           )}
 

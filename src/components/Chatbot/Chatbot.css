@@ -243,9 +243,60 @@
 
 /* Quick Questions */
 .quick-questions {
-  padding: 15px 20px;
   border-top: 1px solid var(--border-color);
   background-color: var(--bg-primary);
+}
+
+.questions-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 15px 20px;
+  cursor: pointer;
+  transition: background-color 0.2s ease;
+}
+
+.questions-header:hover {
+  background-color: var(--bg-secondary);
+}
+
+.questions-header p {
+  margin: 0;
+  font-size: 0.8rem;
+  color: var(--text-secondary);
+  font-weight: 600;
+}
+
+.expand-btn {
+  background: none;
+  border: none;
+  color: var(--text-secondary) !important;
+  font-size: 0.8rem;
+  cursor: pointer;
+  padding: 4px;
+  border-radius: 4px;
+  transition: all 0.2s ease;
+}
+
+.expand-btn:hover {
+  background-color: var(--bg-tertiary);
+  color: var(--linkedin-blue) !important;
+}
+
+.questions-content {
+  padding: 0 20px 15px 20px;
+  animation: slideDown 0.3s ease-out;
+}
+
+@keyframes slideDown {
+  from {
+    opacity: 0;
+    max-height: 0;
+  }
+  to {
+    opacity: 1;
+    max-height: 500px;
+  }
 }
 
 /* Question Tabs */
