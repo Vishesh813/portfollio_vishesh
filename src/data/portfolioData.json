@@ -55,7 +55,7 @@
   "workExperience": [
     {
       "id": 1,
-      "position": "Senior Software Engineer",
+      "position": "Senior Engineer",
       "company": "Target",
       "location": "Bangalore, India",
       "duration": "Aug 2024 - Present",
@@ -90,7 +90,7 @@
       "location": "Pune, India",
       "duration": "Aug 2021 - May 2022",
       "type": "Full Time",
-      "logo": "./src/img/pricipal-logo.jpg",
+      "logo": "./src/img/pricipal-logo.png",
       "achievements": [
         "Enhanced operation teams experience for tracking transactions and generating reports",
         "Developed Spring Batch application for processing large volumes of records",
