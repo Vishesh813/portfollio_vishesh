@@ -76,6 +76,17 @@ const AboutSection = () => {
                   </a>
                 </div>
               </div>
+              
+              <div className="resume-download">
+                <button 
+                  className="download-resume-btn"
+                  onClick={() => window.open('https://drive.google.com/file/d/your-resume-id/view', '_blank')}
+                  aria-label="Download Resume"
+                >
+                  <span className="download-icon">📄</span>
+                  Download Resume
+                </button>
+              </div>
             </div>
           </div>
         </div>
