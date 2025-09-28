@@ -80,7 +80,7 @@ const AboutSection = () => {
               <div className="resume-download">
                 <button 
                   className="download-resume-btn"
-                  onClick={() => window.open('https://drive.google.com/file/d/your-resume-id/view', '_blank')}
+                  onClick={() => window.open('https://drive.google.com/file/d/1xNQQ52WLisQPINwnk0KDlFdGV-YvR29e/view?usp=sharing', '_blank')}
                   aria-label="Download Resume"
                 >
                   <span className="download-icon">📄</span>
