@@ -1,5 +1,5 @@
 import { useLocation } from 'react-router-dom';
-import routeConfig from '../data/routeConfig.json';
+import routeConfig from '@data/routeConfig.json';
 
 export const useRoutes = () => {
   const location = useLocation();

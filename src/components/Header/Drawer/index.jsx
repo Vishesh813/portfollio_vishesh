@@ -1,8 +1,8 @@
 import React from 'react';
 import { Link, useLocation } from 'react-router-dom';
-import { useTheme } from '../../../contexts/ThemeContext.jsx';
-import { useRoutes } from '../../../hooks/useRoutes.js';
-import portfolioData from '../../../data/portfolioData.json';
+import { useTheme } from '@contexts/ThemeContext.jsx';
+import { useRoutes } from '@hooks/useRoutes.js';
+import portfolioData from '@data/portfolioData.json';
 import './Drawer.css';
 
 const CustomDrawer = ({ isOpen, onToggle, onClose }) => {
@@ -12,7 +12,6 @@ const CustomDrawer = ({ isOpen, onToggle, onClose }) => {
   
   // Get menu items from JSON configuration
   const menuItems = getNavigationRoutes();
-
   // Function to check if a menu item should be active
   const isActive = (itemPath) => {
     let currentPath = location.pathname;

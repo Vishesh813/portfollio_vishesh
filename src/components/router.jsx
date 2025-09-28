@@ -1,15 +1,15 @@
 import React, { Suspense, lazy } from 'react';
 import { Routes, Route } from 'react-router-dom';
-import routeConfig from '../data/routeConfig.json';
+import routeConfig from '@data/routeConfig.json';
 
 // Dynamic component loader
 const componentMap = {
-  AboutSection: lazy(() => import('./AboutSection/index.jsx')),
-  EducationSection: lazy(() => import('./EducationSection/index.jsx')),
-  WorkExperienceSection: lazy(() => import('./WorkExperience/index.jsx')),
-  Skills: lazy(() => import('./Skills/index.jsx')),
-  Awards: lazy(() => import('./Awards/index.jsx')),
-  Projects: lazy(() => import('./Projects/index.jsx'))
+  AboutSection: lazy(() => import('@components/AboutSection/index.jsx')),
+  EducationSection: lazy(() => import('@components/EducationSection/index.jsx')),
+  WorkExperienceSection: lazy(() => import('@components/WorkExperience/index.jsx')),
+  Skills: lazy(() => import('@components/Skills/index.jsx')),
+  Awards: lazy(() => import('@components/Awards/index.jsx')),
+  Projects: lazy(() => import('@components/Projects/index.jsx'))
 };
 
 // Loading component

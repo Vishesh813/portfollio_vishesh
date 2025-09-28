@@ -1,5 +1,5 @@
 import React, { useState, useRef, useEffect } from 'react';
-import portfolioData from '../../data/portfolioData.json';
+import portfolioData from '@data/portfolioData.json';
 import './Chatbot.css';
 
 const Chatbot = () => {

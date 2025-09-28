@@ -1,7 +1,7 @@
 import React from 'react';
-import knitLogo from '../../img/knit-logo.jpg';
-import csjmLogo from '../../img/csjm-logo.png';
-import nlkLogo from '../../img/up-bord-logo.png';
+import knitLogo from '@assets/img/knit-logo.jpg';
+import csjmLogo from '@assets/img/csjm-logo.png';
+import nlkLogo from '@assets/img/up-bord-logo.png';
 import './EducationSection.css';
 
 const educationData = [

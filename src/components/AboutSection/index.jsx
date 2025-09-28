@@ -1,6 +1,7 @@
 import React from 'react';
-import portfolioData from '../../data/portfolioData.json';
-import profilePic from '../../img/profile-pic.png';
+import portfolioData from '@data/portfolioData.json';
+import profilePic from '@assets/img/profile-pic.png';
+import LinkPreview from '@components/LinkPreview/LinkPreview.jsx';
 import './AboutSection.css';
 
 const AboutSection = () => {
@@ -46,33 +47,33 @@ const AboutSection = () => {
               <div className="contact-info">
                 <div className="contact-item">
                   <span className="contact-icon">📧</span>
-                  <a href={`mailto:${personal.email}`} className="contact-link">
+                  <LinkPreview
+                    href={`mailto:${personal.email}`}
+                    className="contact-link"
+                    placement="right"
+                  >
                     {personal.email}
-                  </a>
+                  </LinkPreview>
                 </div>
-                
+
                 <div className="contact-item">
                   <span className="contact-icon">💼</span>
-                  <a 
-                    href={personal.linkedin} 
-                    target="_blank" 
-                    rel="noopener noreferrer"
+                  <LinkPreview
+                    href={personal.linkedin}
                     className="contact-link"
                   >
                     LinkedIn Profile
-                  </a>
+                  </LinkPreview>
                 </div>
-                
+
                 <div className="contact-item">
                   <span className="contact-icon">🐙</span>
-                  <a 
-                    href={personal.github} 
-                    target="_blank" 
-                    rel="noopener noreferrer"
+                  <LinkPreview
+                    href={personal.github}
                     className="contact-link"
                   >
                     GitHub Profile
-                  </a>
+                  </LinkPreview>
                 </div>
               </div>
               

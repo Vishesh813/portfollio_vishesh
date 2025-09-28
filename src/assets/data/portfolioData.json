@@ -28,7 +28,7 @@
       "duration": "2016 - 2019",
       "percentage": "74.2%",
       "type": "Masters",
-      "logo": "./src/img/knit-logo.jpg"
+      "logo": "./src/assets/img/knit-logo.jpg"
     },
     {
       "id": 2,
@@ -38,7 +38,7 @@
       "duration": "2012 - 2016",
       "percentage": "62.67%",
       "type": "Bachelors",
-      "logo": "./src/img/csjm-logo.png",
+      "logo": "./src/assets/img/csjm-logo.png",
       "university": "Chhatrapati Shahu Ji Maharaj University"
     },
     {
@@ -49,7 +49,7 @@
       "duration": "2010 - 2012",
       "percentage": "78.4%",
       "type": "Higher Secondary",
-      "logo": "./src/img/up-bord-logo.png"
+      "logo": "./src/assets/img/up-bord-logo.png"
     }
   ],
   "workExperience": [
@@ -75,7 +75,7 @@
       "location": "Bangalore, India",
       "duration": "May 2022 - Aug 2024",
       "type": "Full Time",
-      "logo": "./src/img/logo-lowes.png",
+      "logo": "./src/assets/img/lowes-logo.png",
       "achievements": [
         "Developed Promo Central Application for creating and managing diverse types of promotions in a generic way",
         "Optimized search functionality to handle millions of records efficiently",
@@ -90,7 +90,7 @@
       "location": "Pune, India",
       "duration": "Aug 2021 - May 2022",
       "type": "Full Time",
-      "logo": "./src/img/pricipal-logo.png",
+      "logo": "./src/assets/img/pricipal-logo.png",
       "achievements": [
         "Enhanced operation teams experience for tracking transactions and generating reports",
         "Developed Spring Batch application for processing large volumes of records",
@@ -105,7 +105,7 @@
       "location": "Pune, India",
       "duration": "Jul 2019 - Aug 2021",
       "type": "Full Time",
-      "logo": "./src/img/tcs-logo.png",
+      "logo": "./src/assets/img/tcs-logo.png",
       "achievements": [
         "Developed web-based application to find and manage active mainframe jobs",
         "Implemented advanced search functionality with multiple filter options",

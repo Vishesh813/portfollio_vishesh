@@ -1,15 +1,16 @@
 import React from 'react';
-import portfolioData from '../../data/portfolioData.json';
-import targetLogo from '../../img/target-logo.png';
-import lowesLogo from '../../img/lowes-logo.png';
-import principalLogo from '../../img/pricipal-logo.png';
-import tcsLogo from '../../img/tcs-logo.png';
+import portfolioData from '@data/portfolioData.json';
+import targetLogo from '@assets/img/target-logo.png';
+import lowesLogo from '@assets/img/lowes-logo.png';
+import principalLogo from '@assets/img/pricipal-logo.png';
+import tcsLogo from '@assets/img/tcs-logo.png';
+
 import './WorkExperience.css';
 
 // Company color mapping
 const companyColors = {
   'Target': '#CC0000',
-  'Lowe\'s': '#004990', 
+  'Lowe\'s': '#004990',
   'Principal Global Services': '#1f4e79',
   'Tata Consultancy Services': '#0066cc'
 };
