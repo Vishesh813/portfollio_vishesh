@@ -1,6 +1,9 @@
 import React from 'react';
 import portfolioData from '../../data/portfolioData.json';
 import targetLogo from '../../img/target-logo.png';
+import lowesLogo from '../../img/lowes-logo.png';
+import principalLogo from '../../img/pricipal-logo.png';
+import tcsLogo from '../../img/tcs-logo.png';
 import './WorkExperience.css';
 
 // Company color mapping
@@ -11,12 +14,20 @@ const companyColors = {
   'Tata Consultancy Services': '#0066cc'
 };
 
+// Logo mapping for all companies
+const companyLogos = {
+  'Target': targetLogo,
+  'Lowe\'s': lowesLogo,
+  'Principal Global Services': principalLogo,
+  'Tata Consultancy Services': tcsLogo
+};
+
 const experiences = portfolioData.workExperience.map(exp => ({
   company: exp.company,
   position: exp.position,
   location: exp.location,
   duration: exp.duration,
-  logo: exp.company === 'Target' ? targetLogo : exp.logo,
+  logo: companyLogos[exp.company] || exp.logo,
   color: companyColors[exp.company] || '#0066cc',
   achievements: exp.achievements,
 }));

@@ -23,17 +23,6 @@
       "isDefault": false
     },
     {
-      "id": "education",
-      "path": "/education",
-      "name": "Education",
-      "component": "EducationSection",
-      "title": "Education",
-      "description": "My academic background and qualifications",
-      "icon": "🎓",
-      "showInNav": true,
-      "isDefault": false
-    },
-    {
       "id": "work-experience",
       "path": "/work-experience",
       "name": "Work Experience",
@@ -41,6 +30,17 @@
       "title": "Work Experience",
       "description": "My professional career journey",
       "icon": "💼",
+      "showInNav": true,
+      "isDefault": false
+    },
+    {
+      "id": "education",
+      "path": "/education",
+      "name": "Education",
+      "component": "EducationSection",
+      "title": "Education",
+      "description": "My academic background and qualifications",
+      "icon": "🎓",
       "showInNav": true,
       "isDefault": false
     },
