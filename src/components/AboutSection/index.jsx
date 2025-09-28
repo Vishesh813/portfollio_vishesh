@@ -1,11 +1,16 @@
-import React from 'react';
+import React, { useState } from 'react';
 import portfolioData from '@data/portfolioData.json';
 import profilePic from '@assets/img/profile-pic.png';
 import LinkPreview from '@components/LinkPreview/LinkPreview.jsx';
+import ResumePreviewDrawer from '@components/ResumePreviewDrawer/ResumePreviewDrawer.jsx';
 import './AboutSection.css';
 
 const AboutSection = () => {
   const { personal } = portfolioData;
+  const [isDrawerOpen, setIsDrawerOpen] = useState(false);
+
+  const handleOpenDrawer = () => setIsDrawerOpen(true);
+  const handleCloseDrawer = () => setIsDrawerOpen(false);
   
   return (
     <div className="about-section">
@@ -80,17 +85,22 @@ const AboutSection = () => {
               <div className="resume-download">
                 <button 
                   className="download-resume-btn"
-                  onClick={() => window.open('https://drive.google.com/file/d/1xNQQ52WLisQPINwnk0KDlFdGV-YvR29e/view?usp=sharing', '_blank')}
-                  aria-label="Download Resume"
+                  onClick={handleOpenDrawer}
+                  aria-label="Preview and download resume"
                 >
                   <span className="download-icon">📄</span>
-                  Download Resume
+                  Preview Resume
                 </button>
               </div>
             </div>
           </div>
         </div>
       </div>
+      <ResumePreviewDrawer
+        isOpen={isDrawerOpen}
+        onClose={handleCloseDrawer}
+        resumeUrl={personal.resumeUrl}
+      />
     </div>
   );
 };
