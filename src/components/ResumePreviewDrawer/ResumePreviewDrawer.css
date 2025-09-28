@@ -115,6 +115,11 @@
   transform: translateY(-1px);
 }
 
+.resume-drawer__download:focus-visible {
+  outline: 3px solid rgba(10, 102, 194, 0.4);
+  outline-offset: 2px;
+}
+
 .resume-drawer__download:disabled {
   background: var(--border-color);
   cursor: not-allowed;
@@ -220,6 +225,10 @@
 
   .resume-drawer__content {
     padding: 0 20px 20px 20px;
+  }
+
+  .resume-drawer__info {
+    padding: 14px;
   }
 }
 
