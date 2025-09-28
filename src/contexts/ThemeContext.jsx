@@ -12,17 +12,23 @@ export const useTheme = () => {
 
 export const ThemeProvider = ({ children }) => {
   const [theme, setTheme] = useState(() => {
-    // Check localStorage first, then system preference
-    const savedTheme = localStorage.getItem('theme');
-    if (savedTheme) {
-      return savedTheme;
+    if (typeof window !== 'undefined') {
+      const savedTheme = localStorage.getItem('theme');
+      if (savedTheme) {
+        return savedTheme;
+      }
     }
-    return window.matchMedia('(prefers-color-scheme: light)').matches ? 'light' : 'dark';
+    return 'light';
   });
 
   useEffect(() => {
-    // Apply theme to document
-    document.documentElement.setAttribute('data-theme', theme);
+    if (typeof window === 'undefined') {
+      return;
+    }
+
+    const root = document.documentElement;
+    root.setAttribute('data-theme', theme);
+    document.body.setAttribute('data-theme', theme);
     localStorage.setItem('theme', theme);
   }, [theme]);
 
